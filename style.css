@@ -1,0 +1,157 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e6f2e6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b; 
+    padding: 15px 20px; 
+    color: white;
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+.logo {
+    flex: 1; 
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+}
+
+/* Menu Icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+/* Section Styles */
+section {
+    padding: 50px;
+    background-color: whitesmoke;
+    text-align: center;
+    margin-top: 70px; 
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Info Section */
+.info-content {
+    background-color: lightblue;
+    padding: 50px;
+}
+
+.Info {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.info-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Initially hidden on mobile */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+        background-color: #00796b; /* Match navbar color */
+        position: fixed; /* Fixed position */
+        top: 60px; /* Position below the navbar */
+        left: 0; /* Align to the left */
+        transition: max-height 0.3s ease; /* Smooth transition for slide down */
+        max-height: 0; /* Start collapsed */
+        overflow: hidden; /* Prevent overflow */
+        align-items: center; /* Center align items */
+    }
+
+    .nav-links.active {
+        display: flex; 
+        max-height: 400px; 
+    }
+
+    .navbar {
+        flex-direction: row; /* Keep items in a row */
+        justify-content: space-between; /* Space between logo and menu icon */
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .nav-links li {
+        margin-right: 10px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+}
